@@ -1,0 +1,9 @@
+configuration {
+	show-icons: true;
+	show-window-icons: true;
+	drun-show-actions: false;
+	drun-display-format: "{icon} {name}";
+  icon-theme: "candy-icons";
+}
+
+@theme "~/.config/rofi/theme.rasi"
