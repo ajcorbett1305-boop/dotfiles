@@ -17,7 +17,7 @@
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
     "wlr/taskbar",
-    "custom/menu"
+    "image#archmenu"
   ],
 
 
@@ -36,8 +36,9 @@
   },
 
 
-  "custom/menu": {
-    "format": "󰣇",
+  "image#archmenu": {
+    "path": "/home/alex/.local/share/icons/candy-icons/apps/scalable/distributor-logo-archlinux.png",
+    "size": 16,
     "on-click": "rofi -show drun"
   },
 
@@ -132,7 +133,6 @@
       "󰃟 ", "󰃠 "]
   },
 
-  ######FINE DO NOT CHANGE######
   "wlr/taskbar": {
     "on-click": "activate",
     "format": "{icon}",
