@@ -4,7 +4,7 @@
   "height": 32,
   "spacing": 0,
   "modules-left": [
-    "custom/power",
+    "image#powermenu",
     "clock",
     "battery",
     "backlight",
@@ -22,7 +22,7 @@
 
 
   "hyprland/workspaces": {
-    "disable-scroll": false,
+    "disable-scroll": true,
     "all-outputs": true,
     "format": "{icon}",
     "on-click": "activate",
@@ -30,24 +30,25 @@
     "*":[1,2]
     },
     "format-icons": {
-	"active": "●",
-	"default": "○"
+	    "active": "●",
+	    "default": "○"
     }
   },
 
 
   "image#archmenu": {
-    "path": "/home/alex/.local/share/icons/candy-icons/apps/scalable/distributor-logo-archlinux.png",
+    "path": "/home/alex/.config/waybarnew/icons/archmenu/distributor-logo-archlinux.png",
     "size": 16,
     "on-click": "rofi -show drun"
   },
 
 
-  "custom/power": {
-    "format": " ",
+  "image#powermenu": {
+    "path": "/home/alex/.config/waybarnew/icons/powermenu/system-shutdown.png",
+    "size": 16,
 		"tooltip": false,
 		"menu": "on-click",
-		"menu-file": "~/.config/waybar/power_menu.xml",
+		"menu-file": "/home/alex/.config/waybar/power_menu.xml",
 		"menu-actions": {
 			"shutdown": "systemctl poweroff",
 			"reboot": "systemctl reboot",
@@ -64,7 +65,7 @@
     "format": "{icon}",
     "icon": true,
     "format-charging": "󱐋",
-    "interval": 1,
+    "interval": 30,
     "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
     "tooltip": true,
     "tooltip-format-charging": "Battery: {capacity}%\nCharging: {time} until full",
@@ -112,13 +113,14 @@
     "tooltip": true
   },
   "clock": {
-    "interval": 1,
+    "interval": 10,
     "timezone": "Europe/London",
     "format": " {:%H:%M} ",
     "tooltip": true,
     "tooltip-format": "{:L%d/%m/%Y}"
   },
   "tray": {
+    "icon-theme": "candy-icons",
     "icon-size": 16,
     "spacing": 6
   },
