@@ -1,0 +1,142 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "spacing": 0,
+  "icon-theme": "candy-icons",
+  "modules-left": [
+    "custom/power",
+    "clock",
+    "battery",
+    "backlight",
+    "tray",
+    "pulseaudio",
+    "temperature",
+    "memory",
+    "cpu"
+  ],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "wlr/taskbar",
+    "custom/menu"
+  ],
+
+
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "on-click": "activate",
+    "persistent-workspaces": {
+    "*":[1,2]
+    },
+    "format-icons": {
+	"active": "●",
+	"default": "○"
+    }
+  },
+
+
+  "custom/menu": {
+    "format": "󰣇",
+    "on-click": "rofi -show drun"
+  },
+
+
+  "custom/power": {
+    "format": " ",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "~/.config/waybar/power_menu.xml",
+		"menu-actions": {
+			"shutdown": "systemctl poweroff",
+			"reboot": "systemctl reboot",
+			"lock": "hyprlock"
+		},
+  },
+
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}",
+    "icon": true,
+    "format-charging": "󱐋",
+    "interval": 1,
+    "format-icons": ["󰂎", "󰁼", "󰁿", "󰂁", "󰁹"],
+    "tooltip": true,
+    "tooltip-format-charging": "Battery: {capacity}%\nCharging: {time} until full",
+    "tooltip-format-discharging": "Battery: {capacity}%\nDischarging: {time} remaining",
+  },
+
+  "pulseaudio": {
+    "icon": "true",
+    "format": "{icon}",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [
+        " ",
+        " ",
+        " "
+      ]
+    },
+    "on-click-left": "pavucontrol -t 3",
+    "on-click-right": "pactl -- set-sink-mute 0 toggle",
+    "tooltip": true,
+    "tooltip-format": "Volume: {volume}%"
+  },
+
+  "temperature": {
+    "format": "{icon}",
+    "critical-threshold": 80,
+    "format-critical": "<span color='#ff0000'>{icon}</span>",
+    "tooltip": true,
+    "tooltip-format": "Temperature: {temperatureC}°C",
+    "format-icons": ""
+  },
+
+  "memory": {
+    "format": " ",
+    "tooltip": true,
+    "tooltip-format": "RAM: {used:0.2f}G/{total:0.2f}G"
+  },
+  "cpu": {
+    "format": " ",
+    "tooltip": true
+  },
+  "clock": {
+    "interval": 1,
+    "timezone": "Europe/London",
+    "format": " {:%H:%M} ",
+    "tooltip": true,
+    "tooltip-format": "{:L%d/%m/%Y}"
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 6
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}",
+    "tooltip": true,
+    "tooltip-format": "Brightness: {percent}%",
+    "format-icons": [
+      "󰃞 ",
+      "󰃝 ",
+      "󰃟 ", "󰃠 "]
+  },
+  "wlr/taskbar": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "icon-theme": "candy-icons",
+    "spacing": 0,
+  },
+}
+
