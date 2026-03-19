@@ -24,9 +24,11 @@ return {
 
   s("prp", fmta("\\begin{proposition}\n  <>\n\\end{{proposition}", { i(1) })),
 
-  s("lem", fmta("\\begin{lemma}\n  <>\n\\end{lemma}", { i(1) })),
+  s("lma", fmta("\\begin{lemma}\n  <>\n\\end{lemma}", { i(1) })),
 
-  s("cor", fmta("\\begin{corollary}\n  <>\n\\end{corollary}", { i(1) })),
+  s("cry", fmta("\\begin{corollary}\n  <>\n\\end{corollary}", { i(1) })),
+
+  s("pf", fmta("\\begin{proof}\n  <>\n\\end{proof}", { i(1) })),
 
   s("num", fmta("\\begin{enumerate}\n  <>\n\\end{enumerate}", { i(1) })),
 
