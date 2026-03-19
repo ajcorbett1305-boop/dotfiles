@@ -22,7 +22,7 @@ return {
 
   s("thm", fmta("\\begin{thm}\n  <>\n\\end{thm}", { i(1) })),
 
-  s("prp", fmta("\\begin{proposition}\n  <>\n\\end{{proposition}", { i(1) })),
+  s("prp", fmta("\\begin{proposition}\n  <>\n\\end{proposition}", { i(1) })),
 
   s("lma", fmta("\\begin{lemma}\n  <>\n\\end{lemma}", { i(1) })),
 
