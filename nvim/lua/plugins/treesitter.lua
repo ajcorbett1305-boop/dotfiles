@@ -8,6 +8,7 @@ return {
       "lua",
       "latex",
       "vim",
+      "typst",
     },
   },
 }

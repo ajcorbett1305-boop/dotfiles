@@ -20,7 +20,7 @@ return {
 
   s("def", fmta("\\begin{definition}\n  <>\n\\end{definition}", { i(1) })),
 
-  s("thm", fmta("\\begin{thm}\n  <>\n\\end{thm}", { i(1) })),
+  s("thm", fmta("\\begin{theorem}\n  <>\n\\end{theorem}", { i(1) })),
 
   s("prp", fmta("\\begin{proposition}\n  <>\n\\end{proposition}", { i(1) })),
 
@@ -30,7 +30,9 @@ return {
 
   s("pf", fmta("\\begin{proof}\n  <>\n\\end{proof}", { i(1) })),
 
-  s("num", fmta("\\begin{enumerate}\n  <>\n\\end{enumerate}", { i(1) })),
+  s("ex", fmta("\\begin{example}\n  <>\n\\end{example}", { i(1) })),
+
+  s("num", fmta("\\begin{enumerate}\n  \\item <>\n\\end{enumerate}", { i(1) })),
 
   s("bb", fmta("\\mathbb{<>}", { i(1, "R") })),
 
@@ -38,5 +40,5 @@ return {
 
   s("var", fmta("\\mathcal{V}\\left(<>\\right)", { i(1, "I") })),
 
-  s("ide", fmta("\\left\\langle<>\\right\\rangle", { i(1) })),
+  s("ide", fmta("\\left\\langle <>\\right\\rangle", { i(1) })),
 }
